@@ -5,6 +5,23 @@
         </div>
         <div class='col-sm-9 body-content'>
             <router-outlet></router-outlet>
+
+            <md-card>
+                <md-checkbox ng-model="isChecked" aria-label="Finished?">
+                    Finished ?
+                </md-checkbox>
+                <md-checkbox ng-disabled="true" aria-label="Disabled" >
+                    Checkbox: Disabled
+                </md-checkbox>
+                <md-toolbar color="primary">
+                    <span>Application Title</span>
+
+                    <!-- This fills the remaining space of the current row -->
+                    <span class="example-fill-remaining-space"></span>
+
+                    <span>Right Aligned Text</span>
+                </md-toolbar>
+            </md-card>
         </div>
     </div>
 </div>

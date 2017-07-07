@@ -6,6 +6,7 @@ import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
+import { MdButtonModule, MdCheckboxModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule, MdRadioModule } from '@angular/material';
 
 export const sharedConfig: NgModule = {
     bootstrap: [ AppComponent ],
@@ -17,6 +18,13 @@ export const sharedConfig: NgModule = {
         HomeComponent
     ],
     imports: [
+        MdCheckboxModule,
+        MdButtonModule,
+        MdMenuModule,
+        MdCardModule,
+        MdToolbarModule,
+        MdIconModule,
+        MdRadioModule,
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
