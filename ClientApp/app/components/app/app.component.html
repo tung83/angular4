@@ -7,20 +7,15 @@
             <router-outlet></router-outlet>
 
             <md-card>
-                <md-checkbox ng-model="isChecked" aria-label="Finished?">
-                    Finished ?
-                </md-checkbox>
-                <md-checkbox ng-disabled="true" aria-label="Disabled" >
-                    Checkbox: Disabled
-                </md-checkbox>
-                <md-toolbar color="primary">
-                    <span>Application Title</span>
+                <md-input-container>
+                    <input mdInput placeholder="State" [mdAutocomplete]="auto" [formControl]="stateCtrl">
+                </md-input-container>
 
-                    <!-- This fills the remaining space of the current row -->
-                    <span class="example-fill-remaining-space"></span>
-
-                    <span>Right Aligned Text</span>
-                </md-toolbar>
+                <md-autocomplete #auto="mdAutocomplete">
+                    <md-option *ngFor="let state of filteredStates | async" [value]="state">
+                        {{ state }}
+                    </md-option>
+                </md-autocomplete>
             </md-card>
         </div>
     </div>
