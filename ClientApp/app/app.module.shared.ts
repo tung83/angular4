@@ -6,8 +6,9 @@ import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
+import { MaterialdemoComponent } from './components/materialdemo/materialdemo.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MdCardModule, MdInputModule, MdAutocompleteModule} from '@angular/material';
+import { MdCardModule, MdInputModule, MdAutocompleteModule, MdRadioModule} from '@angular/material';
 
 export const sharedConfig: NgModule = {
     bootstrap: [ AppComponent ],
@@ -16,7 +17,8 @@ export const sharedConfig: NgModule = {
         NavMenuComponent,
         CounterComponent,
         FetchDataComponent,
-        HomeComponent
+        HomeComponent,
+        MaterialdemoComponent
     ],
     imports: [
         FormsModule,
@@ -24,6 +26,7 @@ export const sharedConfig: NgModule = {
         MdCardModule,
         MdInputModule,
         MdAutocompleteModule,
+        MdRadioModule,
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },

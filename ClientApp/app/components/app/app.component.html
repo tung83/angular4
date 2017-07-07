@@ -5,18 +5,8 @@
         </div>
         <div class='col-sm-9 body-content'>
             <router-outlet></router-outlet>
-
-            <md-card>
-                <md-input-container>
-                    <input mdInput placeholder="State" [mdAutocomplete]="auto" [formControl]="stateCtrl">
-                </md-input-container>
-
-                <md-autocomplete #auto="mdAutocomplete">
-                    <md-option *ngFor="let state of filteredStates | async" [value]="state">
-                        {{ state }}
-                    </md-option>
-                </md-autocomplete>
-            </md-card>
+            <materialdemo></materialdemo>
+           
         </div>
     </div>
 </div>

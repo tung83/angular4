@@ -1,0 +1,19 @@
+<md-card>
+    <md-input-container>
+        <input mdInput placeholder="State" [mdAutocomplete]="auto" [formControl]="stateCtrl">
+    </md-input-container>
+
+    <md-autocomplete #auto="mdAutocomplete">
+        <md-option *ngFor="let state of filteredStates | async" [value]="state">
+            {{ state }}
+        </md-option>
+    </md-autocomplete>
+    <!--radio button-->
+    <div class="clearfix"></div>
+    <md-radio-group class="example-radio-group" [(ngModel)]="favoriteSeason">
+        <md-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+            {{season}}
+        </md-radio-button>
+    </md-radio-group>
+    <div class="example-selected-value">Your favorite season is: {{favoriteSeason}}</div>
+</md-card>
